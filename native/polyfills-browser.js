@@ -372,11 +372,11 @@ function _visitNode(node, callback) {
     global.clearTimeout = BackgroundTimer.clearTimeout.bind(BackgroundTimer);
     global.clearInterval = BackgroundTimer.clearInterval.bind(BackgroundTimer);
     global.setInterval = BackgroundTimer.setInterval.bind(BackgroundTimer);
-    global.setTimeout = BackgroundTimer.setTimeout.bind(BackgroundTimer);
-    // global.setTimeout = (fn, time=0, ...rest) => {
-    //   // console.trace('setTimeout called:', fn, time, rest)
-    //   BackgroundTimer.setTimeout(fn, time, ...rest);
-    // }
+    // global.setTimeout = BackgroundTimer.setTimeout.bind(BackgroundTimer);
+    global.setTimeout = (fn, time=0, ...rest) => {
+      // console.trace('setTimeout called:', fn, time, rest)
+      BackgroundTimer.setTimeout(fn, time, ...rest);
+    }
     global.DOMParser = DOMParser;
 
 })(global || window || this); // eslint-disable-line no-invalid-this
