@@ -11,7 +11,7 @@
   "dependencies": {
     "es6-iterator": "^2.0.3",
     "jitsi-meet-logger": "github:jitsi/jitsi-meet-logger#6fff754a77a56ab52499f3559105a15886942a1e",
-    "jquery": ">=3.0.0",
+    "jquery": "^2.1.4",
     "react": "16.2.0",
     "react-native-background-timer": "2.0.0",
     "react-native-callstats": "^3.28.2",
